@@ -65,9 +65,10 @@ while loop == True:
         
         # loop for the number of items ordered
         length = len(itemcode)
+        print('Your order is:')
         for i in range(length):
             # print the multiplier of the ith item in the order, the name of the ith item, and the price
-            print(f'Your order is: \n{numberofitem[i]} x {snacks[itemcode[i]]} - Price: {int(prices[itemcode[i]]) * int(numberofitem[i])}') # use "prices[itemcode[i]]"" to avoid a key error from the dictionary
+            print(f'{numberofitem[i]} x {snacks[itemcode[i]]} - Price: {int(prices[itemcode[i]]) * int(numberofitem[i])}') # use "prices[itemcode[i]]"" to avoid a key error from the dictionary
             totalprice += int(prices[itemcode[i]]) * int(numberofitem[i])
         print(f'Total price = {totalprice}')
         loop = False
