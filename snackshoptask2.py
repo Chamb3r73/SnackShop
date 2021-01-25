@@ -47,7 +47,7 @@ prices = {
 }
 
 # get order
-print('To choose an item, type its code. Specify the number of an item by giving a number next to the item code seperated by a full stop, eg: "3.2" to buy 2 juices. Seperate different items by commas')
+print('How to use:\n- To choose an item, type its code.\n- Specify the number of an item by giving a number next to the item code seperated by a full stop, eg: "3.2" to buy 2 juices, or "4.4" to buy four salads (do NOT use "4" to buy one salad, use "4.1"). \n- Seperate different items by commas\n-----------------------------')
 loop = True
 while loop == True:
     try:
@@ -59,9 +59,11 @@ while loop == True:
         # take the item code and multiplier from each side of the full stop
         for i in itemsplit:
             numberofitem.append(i.split('.')[-1])
+            #print(f'number of item: {numberofitem}')
         itemcode = []
         for i in itemsplit:
             itemcode.append(i.split('.')[0])
+            #print(f'item code: {itemcode}')
         
         # loop for the number of items ordered
         length = len(itemcode)
@@ -71,8 +73,8 @@ while loop == True:
             print(f'{numberofitem[i]} x {snacks[itemcode[i]]} - Price: {int(prices[itemcode[i]]) * int(numberofitem[i])}') # use "prices[itemcode[i]]"" to avoid a key error from the dictionary
             totalprice += int(prices[itemcode[i]]) * int(numberofitem[i])
         print(f'Total price = {totalprice}')
+
         loop = False
     except:
         # catch errors
-        print('Sorry! That was not a valid code. Try again')
-
+        print('Sorry! That was not a valid code, or you might have misformatted your order. Try again')
