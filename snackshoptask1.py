@@ -3,12 +3,12 @@
 # define menu dictionary
 menu = {
 
-    "Burger": "Price: 150 - Code: 0",
-    "Cola": "Price: 50 - Code: 1",
-    "Juice": "Price: 60 - Code: 2",
-    "Salad": "Price: 100 - Code: 3",
-    "Fries": "Price: 90 - Code: 4",
-    "Fruit": "Price: 40 - Code: 5"
+    "Burger": "Price: 150 - Code: 1",
+    "Cola": "Price: 50 - Code: 2",
+    "Juice": "Price: 60 - Code: 3",
+    "Salad": "Price: 100 - Code: 4",
+    "Fries": "Price: 90 - Code: 5",
+    "Fruit": "Price: 40 - Code: 6"
 
 }
 
@@ -22,12 +22,12 @@ print('-----------------------------')
 # define snacks dictionary
 snacks = {
 
-    "0": "Burger - Price: 150",
-    "1": "Cola - Price: 50",
-    "2": "Juice - Price: 60",
-    "3": "Salad - Price: 100",
-    "4": "Fries - Price: 90",
-    "5": "Fruit - Price: 40"
+    "1": "Burger - Price: 150",
+    "2": "Cola - Price: 50",
+    "3": "Juice - Price: 60",
+    "4": "Salad - Price: 100",
+    "5": "Fries - Price: 90",
+    "6": "Fruit - Price: 40"
 
 }
 
