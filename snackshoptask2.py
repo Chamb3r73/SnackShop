@@ -1,4 +1,4 @@
-# SNACK SHOP TASK 1
+# SNACK SHOP TASK 2
 
 # set variables
 totalprice = 0
