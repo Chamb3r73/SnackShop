@@ -31,9 +31,11 @@ snacks = {
 
 }
 
-# get order
+# get and print order
 print('To choose an item, type its code')
-item = (input('Choose your item: '))
-
-# print order
-print(f'Your order is: {snacks[item]}')
+while True:
+    try:
+        item = (input('Choose your item: '))
+        print(f'Your order is: {snacks[item]}')
+    except:
+        print('Sorry! That was not a valid code. Try again')
