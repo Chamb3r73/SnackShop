@@ -31,7 +31,7 @@ snacks = {
 
 }
 
-# get and print order
+# get and print order with error handling
 print('To choose an item, type its code')
 while True:
     try:
