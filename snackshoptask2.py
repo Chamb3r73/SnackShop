@@ -51,21 +51,27 @@ print('To choose an item, type its code. Specify the number of an item by giving
 loop = True
 while loop == True:
     try:
+        # get order
         items = str(input('Choose your items: '))
+        # seperate each item by comma
         itemsplit = items.split(', ')
         numberofitem = []
+        # take the item code and multiplier from each side of the full stop
         for i in itemsplit:
             numberofitem.append(i.split('.')[-1])
         itemcode = []
         for i in itemsplit:
             itemcode.append(i.split('.')[0])
+        
+        # loop for the number of items ordered
+        length = len(itemcode)
+        for i in range(length):
+            # print the multiplier of the ith item in the order, the name of the ith item, and the price
+            print(f'Your order is: \n{numberofitem[i]} x {snacks[itemcode[i]]} - Price: {int(prices[itemcode[i]]) * int(numberofitem[i])}') # use "prices[itemcode[i]]"" to avoid a key error from the dictionary
+            totalprice += int(prices[itemcode[i]]) * int(numberofitem[i])
+        print(f'Total price = {totalprice}')
         loop = False
     except:
+        # catch errors
         print('Sorry! That was not a valid code. Try again')
 
-# print order
-length = len(itemcode)
-for i in range(length):
-    print(f'Your order is: \n{numberofitem[i]} x {snacks[itemcode[i]]} - Price: {int(prices[itemcode[i]]) * int(numberofitem[i])}')
-    totalprice += int(prices[itemcode[i]]) * int(numberofitem[i])
-print(f'Total price = {totalprice}')
