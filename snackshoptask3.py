@@ -60,7 +60,7 @@ healthy = {
 }
 
 # get order
-print('How to use:\n- To choose an item, type its code.\n- Specify the number of an item by giving a number next to the item code seperated by a full stop, eg: "3.2" to buy 2 juices, or "4.4" to buy four salads (do NOT use "4" to buy one salad, use "4.1"). \n- Seperate different items by commas\n-----------------------------')
+print('How to use:\n- To choose an item, type its code.\n- Specify the number of an item by giving a number next to the item code seperated by a full stop, eg: "3.2" to buy 2 juices (do NOT use "4" to buy one salad, use "4.1"). \n- Seperate different items by commas\n-----------------------------')
 loop = True
 while loop == True:
     try:
@@ -89,7 +89,7 @@ while loop == True:
 
         if unhealthyItems > healthyItems:
             unhealthyOrder = True
-            print('You have more unhealthy items than healthy items! Please order your food again') 
+            print('You have more unhealthy items than healthy items! Please order your food again')
 
         if unhealthyOrder == True:
             continue
